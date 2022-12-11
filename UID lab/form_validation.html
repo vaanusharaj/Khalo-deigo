@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function form_val(){
+                let x= document.forms["cys"]["fname"].value;
+                let y=document.forms["cys"]["inp"].value;
+                if (x == ""){
+                    alert("You need to enter a valid text");
+                    return false;
+                }
+                if (y<=0 || y>=100){
+                    alert("enter a valid number between 1 and 100");
+                }else{
+                    document.write("success")
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JAVASCRIPT FORM VALIDATION</h1>
+        <form name="cys" action="/actionpage.php" onsubmit="return form_val()" method="post">
+            Name:  <input type="text" name="fname"><br><br>
+            Enter a number: <input type="number" name="inp"><br><br>
+            <input type="submit" value="Submit">
+    </body>
+</html>
